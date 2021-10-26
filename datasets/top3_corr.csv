@@ -1,0 +1,13 @@
+﻿Feature Name,Normal,DOS,Probe,R2L,U2R
+logged in,0.7953,-0.754107,,,
+count,-0.75297,0.762798,,,
+service_http,0.744731,0.720145,,,
+service_eco_i,,,0.48,,
+dst_host_diff_srv_rate,,,0.468716,,
+diff_srv_rate,,,0.427723,,
+hot,,,,0.449503,
+is_guest_login,,,,0.356408,
+service_ftp,,,,0.328919,
+root_shell,,,,,0.486117
+service_telnet,,,,,0.207959
+num_shells,,,,,0.125231
