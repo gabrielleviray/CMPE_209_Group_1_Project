@@ -26,12 +26,12 @@ def kddDfEncode(kdd):
 	return kddFourClassesEncoded
 
 def saveList(df):
-    df.to_csv('data_analytics/kddPearsonList.csv', columns=None, header=True, index=True)
-    print('Data saved to data_analytics/kddPearsonList.csv')
+    df.to_csv('data_analytics/kddMutualInfoList.csv', columns=None, header=True, index=True)
+    print('Data saved to data_analytics/kddMutualInfoList.csv')
 
 
 
-def kddPearsonCorr(df):
+def kddMutualInfo(df):
     X_train,X_test,y_train,y_test=train_test_split(df.drop(labels=['attack_type'], axis=1),
     df['attack_type'],
     test_size=0.3,
@@ -48,9 +48,9 @@ def kddPearsonCorr(df):
 
 def retainFeatures(df,a):
 
-    kddPearsonCorrList = pd.read_csv('data_analytics/kddPearsonList.csv', index_col=0)
-    final_columns = kddPearsonCorrList.head(a).index
-    return df.drop(columns=kddPearsonCorrList.index.difference(final_columns))
+    kddMutualInfoList = pd.read_csv('data_analytics/kddMutualInfoList.csv', index_col=0)
+    final_columns = kddMutualInfoList.head(a).index
+    return df.drop(columns=kddMutualInfoList.index.difference(final_columns))
 
 
 
